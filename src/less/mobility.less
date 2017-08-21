@@ -1,0 +1,199 @@
+@media (min-width: 320px) and (max-width: 767px) {
+    #menu{
+        width : @rs-menu-width-xs;
+        position : fixed !important;
+        left : 0 !important;
+        top : 0 !important;
+        .menu-link-a{
+            display : none;
+        }
+        #menu-image,#menu-footer{
+            display : none,
+        }
+    }
+
+    #content{
+        position : relative;
+        left : 0;
+        top : 0;
+        padding-left: @rs-menu-width-xs;
+        .content-data{
+            padding-bottom: 150px;
+        }
+
+    }
+
+    #accueil{
+        display : none;
+    }
+
+    #skills{
+        .box-skills{
+            border : none;
+        }
+    }
+
+    #work{
+        height : auto !important;
+        .content-data-text{
+            height : auto !important;
+        }
+        .work-box{
+            height : 350px !important;
+            &:hover{
+                .work-box-desc{
+                    height : 200px !important;
+                }
+
+            }
+        } 
+    }
+
+    #contact{
+        color : @text-dark;
+        background-color: red;
+        height : auto !important;
+        .content-data-text{
+            height : auto !important;
+            .contact-text{
+                position : relative;
+                padding: 10px !important;
+                width : 100%;
+                background-color: #FFF;
+                height : auto !important;
+                .icon-top{
+                    display : none;
+                }
+                .list-contact{
+                    i{
+                        display : none;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+@media (min-width: 767px) and (max-width : 1100px) {
+    #menu{
+        width : @rs-menu-width-lg;
+        .menu-link-icon{
+            display : none;
+        }
+        #menu-image,#menu-footer{
+            display : none,
+        }
+    }
+    #content{
+        padding-left: @rs-menu-width-lg;
+        .content-data{
+            padding-bottom: 250px;
+        }
+    }
+
+    #accueil{
+        .accueil-background{
+            background-size: cover !important;
+            background-position: center;
+        }      
+        .accueil-top-bar{
+            display : none !important;
+        }
+        .accueil-title
+        {
+            position: relative;
+            top: 50%;
+            width : 100%;
+            min-width: 0px !important;
+            margin: 0 auto;
+
+            text-align: center;
+
+            color: @accueil-font-color;
+            h2
+            {
+                font-size: 30px;
+                margin-top: 0;
+            }
+            .border-gradient
+            {
+                position: relative;
+
+                width: 70%;
+                height: 100%;
+                padding-bottom: 5px;
+                margin: 0 auto;
+                &:after
+                {
+                    position: absolute;
+                    bottom: 0;
+
+                    width: 100%;
+                    height: 1px;
+
+                    content: '';
+
+                    background-image: @accueil-title-shadow;
+                }
+                &:after
+                {
+                    right: 0;
+                    left: auto;
+                }
+            }
+            h4
+            {
+                font-style: italic;
+                margin-top: 10px;
+            }
+        }
+        .accueil-title{
+            position: relative;
+            top: 55%;  
+        }
+        .accueil-quote{
+            display : none;
+        }
+    }
+
+    #skills{
+        .box-skills{
+            border : none;
+        }
+    }
+
+    #work{
+        height : auto !important;
+        .content-data-text{
+            height : auto !important;
+        }
+        .work-box{
+            height : 350px !important;
+            &:hover{
+                .work-box-desc{
+                    height : 200px !important;
+                }
+            }
+
+        } 
+    }
+
+    #contact{
+        color : @text-dark;
+        background-color: red;
+        height : auto !important;
+        .content-data-text{
+            height : auto !important;
+            .contact-text{
+                position : relative;
+                padding: 10px !important;
+                width : 100%;
+                background-color: #FFF;
+                height : auto !important;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,59 @@
+$total: 200;
+$width: 3;
+$height: 3; 
+$time: 5;
+
+html, body {
+  height: 100%;
+}
+
+@function posOrNeg(){
+  @return random() * 2 - 1;
+}
+
+.wrap {
+  position : relative;
+  top : 60%;
+  height: 200px;
+  background: transparent;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  //opacity : 0.5;
+  transform : rotate(180deg);
+}
+
+.c {
+  width: $width+px;
+  height: $height+px;
+  background: blue;
+  position: absolute;
+  //opacity : 0.5;
+}
+
+
+
+@for $i from 1 through $total {
+  .c:nth-child(#{$i}){
+    left: ($i/2)+vw;
+    top: 50%;
+    margin-top: -$height/2+px;
+    animation: anim#{$i} $time+s infinite alternate;
+    animation-delay: -($i * $time/$total)+s;
+    //background: hsla(255, 100%, 100%, 1);
+    background : rgba(255,255,255,0.7);
+  }
+
+  @keyframes anim#{$i} {
+    30% {
+      transform: translate3d(0,0,0);
+    }
+    50% {
+      transform: translate3d(random(155)*posOrNeg()+vh, random(155)*posOrNeg()+vw, random(2000)*posOrNeg()+px);
+      opacity: 0;
+    }
+    70% {
+      transform: translate3d(0,0,0);
+    }
+   
+  }
+}

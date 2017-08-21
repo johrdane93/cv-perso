@@ -1,0 +1,156 @@
+#contact
+{
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    padding-bottom: @contact-padding-bottom;
+
+    color: @text-light;
+    .contact-map
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+    }
+    .content-data-text
+    {
+        position: relative;
+
+        margin: 0;
+        padding: 0;
+
+        background-color: transparent;
+        .contact-text
+        {
+            position: absolute;
+            z-index: 100;
+
+            width: 650px;
+            padding: 0 60px;
+
+            background-color: @contact-text-bg-color;
+            -webkit-box-shadow: 7px 0 10px -5px @shadow-color;
+               -moz-box-shadow: 7px 0 10px -5px @shadow-color;
+                    box-shadow: 7px 0 10px -5px @shadow-color;
+
+                 -o-box-shadow: 7px 0 10px -5px @shadow-color;
+            i
+            {
+                color: darken(@color-contact,45%);
+            }
+            .icon-top
+            {
+                font-size: @contact-big-icon-size;
+
+                margin-top: 60px;
+            }
+            h2
+            {
+                font-weight: @contact-title-weight;
+
+                margin-bottom: 30px;
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
+
+.list-contact
+{
+    margin-top: 40px;
+    li
+    {
+        display: block;
+
+        height: 50px;
+        &.li-adress
+        {
+            height: 20px;
+        }
+        i
+        {
+            width: 30px;
+
+            vertical-align: middle;
+        }
+    }
+}
+
+.list-social
+{
+    i
+    {
+        line-height: 40px;
+
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+
+        text-align: center;
+        vertical-align: middle;
+
+        color: @text-semi-light !important;
+    }
+    a
+    {
+        color: inherit;
+    }
+    li
+    {
+        i
+        {
+            .animate();
+        }
+        &.face:hover
+        {
+            i
+            {
+                color: white !important;
+                //transform: rotate3d(0,1,0,360deg);
+                background-color: #3b5998;
+            }
+        }
+        &.twit:hover
+        {
+            i
+            {
+                color: white !important;
+                //transform: rotate3d(0,1,0,360deg);
+                background-color: #00aced;
+            }
+        }
+        &.linked:hover
+        {
+            i
+            {
+                color: white !important;
+                //transform: rotate3d(0,1,0,360deg);
+                background-color: #007bb6;
+            }
+        }
+        &.github:hover
+        {
+            i
+            {
+                //transform: rotate3d(0,1,0,360deg);
+                color: white !important;
+            }
+        }
+        &.skype:hover
+        {
+            i
+            {
+                //transform: rotate3d(0,1,0,360deg);
+                color: darken(@color-contact,40%) !important;
+            }
+        }
+    }
+}

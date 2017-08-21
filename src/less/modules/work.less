@@ -1,0 +1,126 @@
+
+#work{
+    padding : 0px;
+    margin: 0px;
+    .content-data-text{
+        padding : 0;
+        margin : 0;
+        height : 550px;
+    }
+   [class*="col-"]{
+        padding : 0;
+    }
+    .work-title{
+        position : absolute;
+        top : 10px;
+        left : 10px;
+        z-index: 50;
+    }
+}
+
+.work-box{
+    height : 550px !important;
+    background-size: auto 115%;
+    background-position: center;
+    .animate();
+    &.work-box-half{
+        height : 275px !important;
+    }
+    .work-box-text{
+        position : relative;
+        height : 100%;
+        //padding : 10px 20px;
+        color : @text-light;
+        .animate();
+        .work-box-logo{
+            position : relative;
+            width : 60%;
+            top : 35%;
+            margin : auto auto;
+            .animate();
+        }
+        .work-box-desc{
+            position : absolute;
+            bottom : 0px;
+            width : 100%;
+            border-top: inset solid 1px rgba(255,255,255,0.4);
+            text-align: center;
+
+            height : 0px;
+            overflow : hidden;
+            .animate();
+        }
+    }
+    &:hover{
+        background-size: 175%;
+        background-position: center;
+        .work-box-text{
+            position : relative;
+            height : 100%;
+            color : @text-light;
+            .work-box-logo{
+                position : relative;
+                width : 60%;
+                top : 10%;
+                margin : auto auto;
+            }
+            .work-box-desc{
+                height : 150px;
+                padding : 10px;
+            }
+        }
+    }
+    a{
+        color : darken(@color-work,10%);
+    }
+    .btn-work{
+        padding : 10px;
+        background-color: transparent;
+        border : solid 1px darken(@color-work,10%);
+        i{
+            margin-right: 5px;
+            padding-right: 10px;
+            border-right : solid 1px;
+        }
+    }
+}
+
+#cobras{
+    background-image : url(../images/work/loscobras/bg.jpg);
+    .work-box-text{
+        background-color: rgba(0,0,0,0.5);
+    }
+    .work-box-desc{
+                    background-color: rgba(0,0,0,0.5);
+    }
+}
+
+#miliboo{
+     background-image : url(../images/work/miliboo/bg.png);
+         .work-box-text{
+        background-color: rgba(255,255,255,0.7);
+    }
+    .work-box-desc{
+                    background-color: rgba(0,0,0,0.8);
+    }
+}
+
+#post-it{
+     background-image : url(../images/work/postit.png);
+         .work-box-text{
+        background-color: rgba(0,0,0,0.4);
+    }
+    .work-box-desc{
+                    background-color: rgba(0,0,0,0.8);
+    }
+}
+
+#unlocker{
+     background-image : url(../images/work/unlocker.png);
+         .work-box-text{
+        background-color: rgba(0,0,0,0.4);
+    }
+    .work-box-desc{
+                    background-color: rgba(0,0,0,0.8);
+    }
+}

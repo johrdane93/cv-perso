@@ -1,0 +1,176 @@
+#menu
+{
+    position: absolute;
+    z-index: 200;
+    top: 100%;
+    left: 0;
+
+    width: @menu-width;
+    height: @menu-height;
+
+    background-color: @menu-bg-color;
+    -webkit-box-shadow: 5px 0 7px -5px @shadow-color;
+    -moz-box-shadow: 5px 0 7px -5px @shadow-color;
+    box-shadow: 5px 0 7px -5px @shadow-color;
+
+    -o-box-shadow: 5px 0 7px -5px @shadow-color;
+}
+
+#menu-image
+{
+    height: @menu-width;
+    img
+    {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#menu-links-list
+{
+    font-family: 'Oxygen', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    .menu-links-list-item
+    {
+        font-weight: bold;
+        line-height: @menu-links-height;
+
+        position: relative;
+
+        width: 100%;
+        height: @menu-links-height;
+
+        text-transform: uppercase;
+        color:#FFF;
+        border-bottom: solid 2px @menu-bg-color;
+        &:hover
+        {
+            .menu-link-icon
+            {
+                font-size: 22px;
+
+                transform: rotate3d(0,1,0,360deg);
+            }
+            &#link-home
+            {
+                background-color: lighten(@color-home, 10%);
+            }
+            &#link-cv
+            {
+                background-color: lighten(@color-cv, 10%);
+            }
+            &#link-skills
+            {
+                background-color: lighten(@color-skills, 10%);
+            }
+            &#link-work
+            {
+                background-color: lighten(@color-work, 10%);
+            }
+            &#link-contact
+            {
+                background-color: lighten(@color-contact, 10%);
+            }
+            &#link-propos
+            {
+                background-color: lighten(@color-propos, 5%);
+            }
+        }
+        &#link-home
+        {
+            color: darken(@color-home, 50%);
+            background-color: @color-home;
+        }
+        &#link-cv
+        {
+            color: darken(@color-cv, 50%);
+            background-color: @color-cv;
+        }
+        &#link-skills
+        {
+            color: darken(@color-skills, 50%);
+            background-color: @color-skills;
+        }
+        &#link-work
+        {
+            color: darken(@color-work, 50%);
+            background-color: @color-work;
+        }
+        &#link-contact
+        {
+            color: darken(@color-contact, 50%);
+            background-color: @color-contact;
+        }
+        &#link-propos
+        {
+            color: darken(@color-propos, 50%);
+            background-color: @color-propos;
+        }
+        a
+        {
+            color: inherit;
+        }
+        .menu-link-icon
+        {
+            float: left;
+
+            width: @menu-links-height;
+
+            text-align: center;
+
+            .animate(.3s);
+        }
+        .menu-link-a
+        {
+            position: absolute;
+
+            height: 100%;
+            padding-left: 15px;
+
+            border-left: solid 2px @menu-bg-color;
+            width : calc(~'100% - 45px');  //Changer la valeur ici !
+            background-color: inherit;
+
+            .animate(.1s);
+            &:hover
+            {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+
+
+#menu-footer
+{
+    font-size: @menu-copyright-size;
+
+    position: absolute;
+    right: 0px;
+    padding-top: 5px;
+    padding-right: 0px;
+    bottom: 10px;
+
+    width: 100%;
+
+    text-align: right;
+
+    //border-top: solid 1px @text-light;
+    
+    .menu-footer-border{
+        display : block;
+        height : 1px;
+        background: red; /* not working, let's see some red */
+        margin-bottom: 10px;
+        background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red); 
+        animation: move 7s steps(100) infinite;
+    }
+    .menu-footer-text{
+        padding-right: 5px;
+    }
+}

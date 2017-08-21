@@ -1,0 +1,32 @@
+.animate(@time : .1s){
+    -webkit-transition: all @time ease-in;
+    -moz-transition: all @time ease-in;
+    -o-transition: all @time ease-in;
+    transition: all @time ease-in;
+
+}
+
+@-webkit-keyframes move {
+   from { background-position:    0px; }
+   to { background-position: @menu-width }
+}
+
+@-moz-keyframes move {
+   from { background-position:    0px; }
+   to { background-position: @menu-width }
+}
+
+@-ms-keyframes move {
+   from { background-position:    0px; }
+   to { background-position: @menu-width }
+}
+
+@-o-keyframes move {
+   from { background-position:    0px; }
+   to { background-position: @menu-width }
+}
+
+@keyframes move {
+   from { background-position:    0px; }
+   to { background-position: @menu-width }
+}

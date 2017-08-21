@@ -1,0 +1,41 @@
+body
+{
+    font-family: 'Open Sans', sans-serif;
+
+    overflow: hidden;
+
+    color: @text-dark;
+    background-color: #FFF;
+}
+
+.row
+{
+    margin-right: 0;
+}
+
+
+.beta{
+    display : none;
+    z-index: 9000;
+    position : fixed;
+    top : 0;
+    left : 0;
+    opacity : 0.5;
+    img{
+            height : 100px !important;
+        }
+}
+
+button, .btn, a{
+    &:focus{
+        box-shadow: none !important;
+        color : inherit !important;
+        outline: none !important;
+    }
+}
+
+
+.img-responsive{
+    position : relative;
+    margin : auto;
+}

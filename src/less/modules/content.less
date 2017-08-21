@@ -1,0 +1,53 @@
+#content
+{
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+    padding-left: @menu-width;
+}
+
+.content-data
+{
+    width: 100%;
+    padding: 10px;
+
+    text-align: justify;
+    //padding-bottom: 400px;
+    background-size: cover !important;
+    &:last-child
+    {
+        padding-bottom: 0;
+    }
+    .content-data-text
+    {
+        margin: -@content-padding;
+        padding: @content-padding;
+
+        background-color: @content-bg-color;
+        -webkit-box-shadow: 0 10px 10px -5px @shadow-color;
+           -moz-box-shadow: 0 10px 10px -5px @shadow-color;
+                box-shadow: 0 10px 10px -5px @shadow-color;
+             -o-box-shadow: 0 10px 10px -5px @shadow-color;
+    }
+    &#cv
+    {
+        background: url('../images/content/red.jpg');
+    }
+    &#skills
+    {
+        background: url('../images/content/orange.jpg');
+    }
+    &#contact
+    {
+        background: url('../images/content/green.jpg');
+    }
+    &#work
+    {
+        background: url('../images/content/yellow.jpg');
+    }
+    &#propos
+    {
+        background: url('../images/content/blue.jpg');
+    }
+}
