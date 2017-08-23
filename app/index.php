@@ -204,54 +204,59 @@ if(!IS_MOBILE && !IS_TABLET){
 <?php } ?>
 <!-- CONTENU -->
 
-    <video autoplay loop poster="" id="vidbgrd">
+    <!-- <video autoplay loop poster="" id="vidbgrd">
         <source src="./assets/video/background02.mp4" type="video/mp4"  >
-    </video>
+    </video> -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RtU_mdL2vBM?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1" frameborder="0" allowfullscreen></iframe>
+
 
 <div id="content">
     <div id="cv" class="content-data">
         <div class="content-data-text">
             <div class="row">
-                <div class="col-md-<?php  echo (IS_DESKTOP) ? '8' : '12' ?>">
+                <div class="col-md-<?php  echo (IS_DESKTOP) ? '7' : '12' ?> col-md-offset-1">
+                  <div class="decal">
+
                     <div class="col-md-2 text-center">
-                        <p>
-                            <img src="assets/images/hello.png" alt="" class="img-responsive">
-                        </p>
-                        <a href="../docs/cv.pdf" target="_blank">
-                            <button class="btn btn-down">
-                                <i class="fa fa-download"></i> Mon C.V
-                            </button>
-                        </a>
+                      <p>
+                        <img src="assets/images/hello.png" alt="" class="img-responsive">
+                      </p>
+                      <a href="../docs/cv.pdf" target="_blank">
+                        <button class="btn btn-down">
+                          <i class="fa fa-download"></i> Mon C.V
+                        </button>
+                      </a>
                     </div>
                     <div class="col-md-10">
-                        <h2>
-                            <?php if(date('H',time()) >= 17 && date('H',time()) < 0 ){
-                                echo "Bonsoir !";
-                            } else { echo "Bonjour ! "; }
-                            ?>
-                        </h2>
-                        <p>Bienvenue sur mon site !</p>
-                        <p>Je suis <b>Johrdane Ledra</b>, développeur web à <b>pantin</b> en I.D.F, France.</p>
-                        <p>
-                            J'ai
-                            <?php
-                            //date in mm/dd/yyyy format;
-                            $birthDate = "11/25/1989";
-                            $birthDate = explode("/", $birthDate);
-                            $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
-                                ? ((date("Y") - $birthDate[2]) - 1)
-                                : (date("Y") - $birthDate[2]));
-                            echo $age;
-                            ?>
+                      <h2>
+                        <?php if(date('H',time()) >= 17 && date('H',time()) < 0 ){
+                          echo "Bonsoir !";
+                        } else { echo "Bonjour ! "; }
+                        ?>
+                      </h2>
+                      <p>Bienvenue sur mon site !</p>
+                      <p>Je suis <b>Johrdane Ledra</b>, développeur web à <b>pantin</b> en I.D.F, France.</p>
+                      <p>
+                        J'ai
+                        <?php
+                        //date in mm/dd/yyyy format;
+                        $birthDate = "11/25/1989";
+                        $birthDate = explode("/", $birthDate);
+                        $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
+                        ? ((date("Y") - $birthDate[2]) - 1)
+                        : (date("Y") - $birthDate[2]));
+                        echo $age;
+                        ?>
 
-                            ans et je suis depuis mon plus jeune âge passionné d’informatique.
-                        </p>
-                        <p>
-                            J’ai très vite découvert la programmation et, plus particulièrement, celle des sites internet. Dès lors, j’ai mis toutes mes compétences dans une formation pour  Certification Développeur/intégrateur web chez LePoleS la création de sites internet pour mon plaisir ou pour une cause particulière.
-                        </p>
+                        ans et je suis depuis mon plus jeune âge passionné d’informatique.
+                      </p>
+                      <p>
+                        J’ai très vite découvert la programmation et, plus particulièrement, celle des sites internet. Dès lors, j’ai mis toutes mes compétences dans une formation pour  Certification Développeur/intégrateur web chez LePoleS la création de sites internet pour mon plaisir ou pour une cause particulière.
+                      </p>
                     </div>
+                  </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5 dropShadow">
                             <h4 class="page-header"><i class="flaticon-university1"></i> Ce que j'ai étudié</h4>
                             <ul class="resume-list">
                                 <li>
@@ -276,7 +281,7 @@ if(!IS_MOBILE && !IS_TABLET){
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5 dropShadow col-md-offset-1">
                             <h4 class="page-header"><i class="flaticon-user74"></i> Où j'ai travaillé</h4>
                             <ul class="resume-list">
                                 <li>
@@ -308,7 +313,7 @@ if(!IS_MOBILE && !IS_TABLET){
                     </div>
                 </div>
                 <?php if(IS_DESKTOP){ ?>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="assets/images/moi.png" alt="" title="Ca c'est moi, dans la vrai vie !" class="img-responsive pull-right">
                 </div>
                 <?php } ?>
@@ -319,207 +324,49 @@ if(!IS_MOBILE && !IS_TABLET){
        <div id="skills" class="content-data">
         <div class="content-data-text">
             <div class="row">
-                <div class="col-md-12"><h3 class="page-header"><i class="fa fa-keyboard-o fa-2x"></i> Compétences</h3></div>
+                <div class="col-md-10 col-md-offset-1"><h3 class="page-header"><i class="fa fa-keyboard-o fa-2x"></i> Compétences</h3></div>
+                <div id="comp01"></div>
+                <div id="comp02"></div>
+                <div id="comp03"></div>
                 <div class="content"></div>
-                <div class="col-md-4">
-                    <div class="box-skills webdev">
-                        <h4 class="page-header"><i class="flaticon-html-tag"></i> Développement Web</h4>
-                        <p>
-                            Mon cursus scolaire ainsi que mes expériences professionnelles et personnelles me rendent polyvalent dans le développement Web.
-                        </p>
-                        <p>
-                            <b>Front-end</b>
-                        </p>
+                <div class="col-md-10 col-md-offset-1">
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="skill-item">
-                                    <h5>HTML5</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h5>CSS3</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item">
-                                    <h5>jQuery</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h5>Javascript</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            <b>Back-end</b>
-                        </p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="skill-item">
-                                    <h5>PHP</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h5>UNIX/Apache</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item">
-                                    <h5>SQL</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h5>PL/SQL</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="col-md-4 ">
+                    <div class="box-skills webdev dropShadow">
+                      <h4 class="page-header"><i class="flaticon-html-tag"></i> Développement Web</h4>
+                      <p>
+                        Mon cursus scolaire ainsi que mes expériences professionnelles et personnelles me rendent polyvalent dans le développement Web.
+                      </p>
+                      <div class="" id="skillgraph00"></div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box-skills rwd">
-                        <h4 class="page-header"><i class="flaticon-responsive"></i> Responsive Web Design</h4>
-                        <p>
-                            Lors de l'obtention de ma licence , je vais me spécialisé dans le développement <abbr title="Responsive Web Design">RWD</abbr>.
-                        </p>
-                        <p>
-                            Les technologies progressent sans cesse, entraînant une évolution de la taille et de la résolution des écrans. <br>
-                            A la suite de cette expérience professionnelle, j'intègre systématiquement cette nouvelle technologie à mes développements, et je ne me soucie plus de la taille des écrans !
-                        </p>
+                  </div>
+                  <div class="col-md-4 ">
+                    <div class="box-skills rwd dropShadow">
+                      <h4 class="page-header"><i class="flaticon-responsive"></i> Responsive Web Design</h4>
+                      <p>
+                        Lors de l'obtention de ma licence , je vais me spécialisé dans le développement <abbr title="Responsive Web Design">RWD</abbr>.
+                      </p>
+                      <p>
+                        Les technologies progressent sans cesse, entraînant une évolution de la taille et de la résolution des écrans. <br>
+                        A la suite de cette expérience professionnelle, j'intègre systématiquement cette nouvelle technologie à mes développements, et je ne me soucie plus de la taille des écrans !
+                      </p>
+                      <div class="" id="skillgraph01"></div>
 
-                        <b>Framework CSS</b>
-                    </p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="skill-item">
-                                <h5>Bootstrap</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item">
-                                <h5>Foundation</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                                </div>
-                            </div>
-                        </div>
+                      <p></p>
+                      <p></p>
+                      <p>Je sais aussi gérer un développement Responsive Web Design plus complexe : le <abbr title="Responsive with server side">RESS</abbr>.</p>
                     </div>
-                    <p></p>
-                    <p></p>
-                    <p>Je sais aussi gérer un développement Responsive Web Design plus complexe : le <abbr title="Responsive with server side">RESS</abbr>.</p>
+                  </div>
+                  <div class="col-md-4 ">
+                    <div class="box-skills misc dropShadow">
+                      <h4 class="page-header"><i class="flaticon-translation"></i> Autres compétences</h4>
+                      <div class="" id="skillgraph02"></div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box-skills misc">
-                    <h4 class="page-header"><i class="flaticon-translation"></i> Autres compétences</h4>
-                    <p>
-                        <b>Logiciels</b>
-                    </p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="skill-item">
-                                <h5>Adobe Photoshop</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item">
-                                <h5>Microsoft Office</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p> <b>Systèmes d'exploitation</b> </p>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="skill-item">
-                                <h5>Windows</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <h5>Mac OSX</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item">
-                                <h5>Linux</h5>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </p>
-                <p><b>Langues</b></p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="skill-item">
-                            <h5>Langues02
-                            </h5>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skill-item">
-                            <h5>langues02</h5>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p><b>Permis</b></p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="skill-item">
-                            <h5> pas de Permis B  <small><i>pas de Véhicule personnel </i></small> </h5>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-</div> -->
+</div>
 <div id="work" class="content-data">
     <div class="content-data-text">
         <div class="row">
@@ -630,7 +477,7 @@ if(!IS_MOBILE && !IS_TABLET){
 <div id="propos" class="content-data">
     <div class="content-data-text">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5 col-md-offset-1">
                 <h3 class="page-header"><i class="flaticon-question53"></i> Qui suis-je ?</h3>
                 <div class="row box-propos">
                     <div class="col-md-3 text-center">
@@ -659,30 +506,13 @@ if(!IS_MOBILE && !IS_TABLET){
                     </div>
                     <div class="col-md-9">
                         <p>Quand je ne suis pas sur mon ordinateur, je suis un grand fainéant amateur. Je joue du clavier dans un groupe de geek. <br>
-                            Rares sont les moments où je n'ai pas de touche de clavier en dessou les doigts.
+                            Rares sont les moments où je n'ai pas de touche de clavier en dessou des doigts.
                         </p>
-                        <div class="box-music">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <a href="https://play.spotify.com/user/toxx1k" target="_blank">
-                                        <button class="btn-music">
-                                            <i class="flaticon-spotify5"></i> Spotify
-                                        </button>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <a href="https://soundcloud.com/j-l-parent" target="_blank">
-                                        <button class="btn-music">
-                                            <i class="flaticon-soundcloud6"></i> Soundcloud
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <h3 class="page-header"><i class="flaticon-speech140"></i> Le site</h3>
                 <p>
                     Ce site a pour but de me présenter plus en détails et d'être aussi une vitrine de mes compétences en Développement Web.
@@ -730,12 +560,12 @@ if(!IS_MOBILE && !IS_TABLET){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.scrollTo.min.js"></script>
 <script src="assets/js/jquery.transit.min.js"></script>
-<script src="assets/js/jquery.textillate.min.js"></script>
+<!-- <script src="assets/js/jquery.textillate.min.js"></script> -->
 <script src="assets/js/jquery.lettering.min.js"></script>
 <script src="assets/js/velocity.min.js"></script>
 <script src="assets/js/menu.min.js"></script>
-<script src="assets/js/accueil.min.js"></script>
-<script src="assets/js/content.min.js"></script>
+<script src="assets/js/accueil.js"></script>
+<script src="assets/js/content.js"></script>
 <script src="assets/js/contact.min.js"></script>
 <script src="assets/js/soundButton.js"></script>
 <script src="assets/js/devperso.js"></script>
